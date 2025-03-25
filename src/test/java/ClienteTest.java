@@ -8,29 +8,29 @@ class ClienteTest {
 
     @Test
     void deveEmitirProcuracaoPessoaFisica() {
-        FabricaAbstrata fabrica = new FabricaPessoaFisica();
+        FabricaAbstrata fabrica = FabricaPessoaFisica.getInstance();
         Cliente cliente = new Cliente(fabrica);
-        assertEquals("Procuração para Pessoa Física", cliente.emitirProcuracao());
+        assertEquals("Procuração pessoa física", cliente.emitirProcuracao());
     }
 
     @Test
     void deveEmitirProcuracaoPessoaJuridica() {
-        FabricaAbstrata fabrica = new FabricaPessoaJuridica();
+        FabricaAbstrata fabrica = FabricaPessoaJuridica.getInstance();
         Cliente cliente = new Cliente(fabrica);
-        assertEquals("Procuração para Pessoa Jurídica", cliente.emitirProcuracao());
+        assertEquals("Procuração pessoa juridica", cliente.emitirProcuracao());
     }
 
     @Test
     void deveEmitirContratoPessoaFisica() {
-        FabricaAbstrata fabrica = new FabricaPessoaFisica();
+        FabricaAbstrata fabrica = FabricaPessoaFisica.getInstance();
         Cliente cliente = new Cliente(fabrica);
-        assertEquals("Contrato para Pessoa Física", cliente.emitirContrato());
+        assertEquals("Contrato pessoa fisica", cliente.emitirContrato());
     }
 
     @Test
     void deveEmitirContratoPessoaJuridica() {
-        FabricaAbstrata fabrica = new FabricaPessoaJuridica();
+        FabricaAbstrata fabrica = FabricaPessoaJuridica.getInstance();
         Cliente cliente = new Cliente(fabrica);
-        assertEquals("Contrato para Pessoa Jurídica", cliente.emitirContrato());
+        assertEquals("Contrato pessoa juridica", cliente.emitirContrato());
     }
 }

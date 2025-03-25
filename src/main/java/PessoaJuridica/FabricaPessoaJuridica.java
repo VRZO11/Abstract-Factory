@@ -5,9 +5,9 @@ import Interfaces.Contrato;
 
 public class FabricaPessoaJuridica implements FabricaAbstrata {
 
-    public FabricaPessoaJuridica(){}
-    private FabricaPessoaJuridica instance = new FabricaPessoaJuridica();
-    public FabricaPessoaJuridica getInstance(){
+    private FabricaPessoaJuridica(){}
+    private static FabricaPessoaJuridica instance = new FabricaPessoaJuridica();
+    public static FabricaPessoaJuridica getInstance(){
         return instance;
     }
 
